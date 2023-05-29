@@ -1,0 +1,1 @@
+print("The final output", ((5*7)+ (3*9)/2))
