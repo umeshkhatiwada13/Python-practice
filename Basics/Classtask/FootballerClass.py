@@ -5,3 +5,10 @@ class Footballer:
         self.country = country
         self.position = position
         self.is_starter = is_starter
+
+    # Object function
+    def is_spanish(self):
+        if self.country.lower() == 'spain':
+            return True
+        else:
+            return False
