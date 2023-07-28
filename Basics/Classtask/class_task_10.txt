@@ -1,0 +1,2 @@
+In Python you can develop Web Applications.
+In Python you can do Machine Learning.

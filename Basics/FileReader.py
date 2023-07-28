@@ -2,7 +2,7 @@
 # r - read , w - write , a - append, w+ - read and write
 test_file = open("Test.txt", "r")
 # checks if the file is readable
-# readable for r and w+, false for other operations
+#  for r and w+, false for other operations
 print("Is file readable {}".format(test_file.readable()))
 
 # Read the whole file at one go
