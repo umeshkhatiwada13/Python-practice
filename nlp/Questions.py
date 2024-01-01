@@ -10,3 +10,15 @@ def replace_dot_comma_space(input_string):
 
 print(replace_dot_comma_space("Hello  This,,is Cristiano Ronaldo."))
 
+
+# Write a Python program to find all five-character words in a string.
+def findLengthFive(inputString):
+    wordList = []
+    words = inputString.split()
+    for word in words:
+        if len(word) == 5:
+            wordList.append(word)
+    return wordList
+
+
+print(findLengthFive("My name is Cristiano Ronaldo"))
