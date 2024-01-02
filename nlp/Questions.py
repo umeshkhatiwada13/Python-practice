@@ -22,3 +22,16 @@ def findLengthFive(inputString):
 
 
 print(findLengthFive("My name is Cristiano Ronaldo"))
+
+# Write a Python program to find all three, four, and five character words in a string.
+
+def findGivenWords(inputString):
+    wordList = []
+    words = inputString.split()
+    for word in words:
+        if len(word) == 5 or len(word) == 4 or len(word) == 3:
+            wordList.append(word)
+    return wordList
+
+
+print(findGivenWords("My name is Cristiano"))
