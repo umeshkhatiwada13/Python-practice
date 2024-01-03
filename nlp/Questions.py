@@ -35,3 +35,15 @@ def findGivenWords(inputString):
 
 
 print(findGivenWords("My name is Cristiano"))
+
+# Write a Python program to find all words that are at least 4 characters long in a string.
+def getWords(inputString):
+    wordList = []
+    words = inputString.split()
+    for word in words:
+        if len(word) >= 4:
+            wordList.append(word)
+    return wordList
+
+
+print(getWords("My name is Cristiano"))
