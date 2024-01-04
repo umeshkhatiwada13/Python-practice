@@ -47,3 +47,19 @@ def getWords(inputString):
 
 
 print(getWords("My name is Cristiano"))
+
+# Write a Python program to convert a camel-case string to a snake-case string.
+def camelToSnakeCase(word):
+    wordList = re.findall('[A-Z][a-z]*', word)
+    finalWord = ''
+    counter = 0
+    for w in wordList:
+        if counter == 0:
+            finalWord += w.lower()
+            counter += 1
+        else:
+            finalWord += '_' + w.lower()
+    return finalWord
+
+
+print(camelToSnakeCase("HelloWorld"))
