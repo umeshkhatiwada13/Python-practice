@@ -63,3 +63,15 @@ def camelToSnakeCase(word):
 
 
 print(camelToSnakeCase("HelloWorld"))
+
+
+# Write a python program to convert snake-case string to camel-case string.
+def snakeToCamelCase(word):
+    wordList = word.split('_')
+    finalWord = ''
+    for word in wordList:
+        finalWord += word.capitalize()
+    return finalWord
+
+
+print(snakeToCamelCase("hello_world"))
