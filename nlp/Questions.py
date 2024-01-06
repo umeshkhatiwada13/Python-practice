@@ -75,3 +75,11 @@ def snakeToCamelCase(word):
 
 
 print(snakeToCamelCase("hello_world"))
+
+# Write a Python program to extract values between quotation marks of a string.
+def extractValue(word):
+    pattern = re.compile(r'"([^"]*)"')
+    return re.findall(pattern, word)
+
+
+print(extractValue('a"Hello World"'))
