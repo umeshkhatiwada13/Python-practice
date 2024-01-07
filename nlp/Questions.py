@@ -83,3 +83,11 @@ def extractValue(word):
 
 
 print(extractValue('a"Hello World"'))
+
+# Write a Python program to remove multiple spaces from a string.
+def remove_multiple_spaces(text):
+    # replacing multiple space with single space
+    return re.sub(r'\s+', ' ', text)
+
+
+print(remove_multiple_spaces("Hello World. I  am    a Python programmer"))
