@@ -91,3 +91,10 @@ def remove_multiple_spaces(text):
 
 
 print(remove_multiple_spaces("Hello World. I  am    a Python programmer"))
+
+# Write a Python program to remove all whitespaces from a string.
+def remove_whitespaces(text):
+    return text.replace(" ", '')
+
+
+print(remove_whitespaces("Hello World. I am a Python programmer"))
