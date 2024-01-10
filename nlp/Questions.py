@@ -98,3 +98,12 @@ def remove_whitespaces(text):
 
 
 print(remove_whitespaces("Hello World. I am a Python programmer"))
+
+# Write a Python program to find URLs in a string.
+def extract_urls(sentence):
+    urls = re.findall(r'https?://\S+|www\.\S+', sentence)
+    return urls
+
+
+print(extract_urls(
+    "Hello. I am Cristiano Ronaldo. Find me at https://cristianoronaldo.com or https://allnassr.com/ronaldo"))
