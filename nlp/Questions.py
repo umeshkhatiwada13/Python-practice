@@ -107,3 +107,15 @@ def extract_urls(sentence):
 
 print(extract_urls(
     "Hello. I am Cristiano Ronaldo. Find me at https://cristianoronaldo.com or https://allnassr.com/ronaldo"))
+
+
+# Write a Python program to split a string into uppercase letters.
+def uppercase_letters(string):
+    uppercase_letter_list = []
+    for char in string:
+        if (char.isupper()):
+            uppercase_letter_list.append(char)
+    return uppercase_letter_list
+
+
+print(uppercase_letters("Hello World. I am a Python"))
