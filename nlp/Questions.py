@@ -119,3 +119,11 @@ def uppercase_letters(string):
 
 
 print(uppercase_letters("Hello World. I am a Python"))
+
+# Write a Python program to do case-insensitive string replacement.
+def case_insensitive_replace(input_string, target, replacement):
+    result = re.sub(re.escape(target), replacement, input_string, flags=re.IGNORECASE)
+    return result
+
+
+print(case_insensitive_replace("I am Cristiano", "Cristiano", "cristiano"))
