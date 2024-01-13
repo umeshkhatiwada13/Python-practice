@@ -127,3 +127,11 @@ def case_insensitive_replace(input_string, target, replacement):
 
 
 print(case_insensitive_replace("I am Cristiano", "Cristiano", "cristiano"))
+
+# Write a Python program to insert spaces between words starting with capital letters.
+def replace_capital_by_space(string):
+    pattern = re.compile(r'([a-z])([A-Z])')
+    return re.sub(pattern, r'\1 \2', string)
+
+
+print(replace_capital_by_space("HelloThisIsCristianoRonaldo"))
