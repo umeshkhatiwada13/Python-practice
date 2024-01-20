@@ -1,5 +1,5 @@
 # a : Write a Python program to check if a number is a perfect square
-# Time complexity : o(sqrt(n)) #
+# Time complexity : o(sqrt(n))
 # Space complexity : o(1)
 def check_perfect_square(number):
     # if the number is 0 or 1 it is square root, return true
@@ -32,7 +32,7 @@ print("Checking the missing number ", find_missing_number([1,2,4]))
 
 
 # C- Write a Python program to find the single number in a list that doesn't occur twice.
-# Time Complexity : o(n*k) where nis length of num_list and k is length of new_list
+# Time Complexity : o(n*k) where n is length of num_list and k is length of new_list
 # Space Complexity : o(n)
 def find_non_repated_number(num_list):
     new_list = []
