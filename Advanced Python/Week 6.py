@@ -27,6 +27,15 @@ print(check_ap([5, 7, 9, 11]))
 # Ugly numbers are positive numbers whose only prime factors are 2, 3 or 5. The sequence 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, ...
 # shows the first 10 ugly numbers.
 # Note: 1 is typically treated as an ugly number
+def is_ugly_number(num):
+    prime_numbers = [2, 3, 5]
+    for prime in prime_numbers:
+        while num % prime == 0:
+            num = num // prime
+    return num == 1
+
+
+print("Is 12 ugly number ", is_ugly_number(12))
 
 
 # 3-Write a Python Function to find the single number in a list that doesn't occur n times.
@@ -46,4 +55,4 @@ def get_non_repeating_number(number_array, n):
     return final_item
 
 
-print(get_non_repeating_number([5, 3, 3, 4, 4, 3, 4],3))
+print(get_non_repeating_number([5, 3, 3, 4, 4, 3, 4], 3))
