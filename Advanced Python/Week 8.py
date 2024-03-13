@@ -30,3 +30,6 @@ def majority_element(nums):
 print(majority_element([3,2,3]))
 
 
+
+
+
