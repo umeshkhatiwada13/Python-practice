@@ -111,32 +111,6 @@ print(count_length(5))  # Output: 68
 #
 # A subarray is a contiguous part of an array.
 
-def count_god_sub_array(nums, k):
-    count = 0
-    left = 0
-    freq_map = {}
-    distinct_count = 0
-    for right, num in enumerate(nums):
-        freq_map[num] = freq_map.get(num, 0) + 1
-
-        if freq_map[num] == 1:
-            distinct_count += 1
-
-        while distinct_count > k:
-            freq_map[nums[left]] -= 1
-            if freq_map[nums[left]] == 0:
-                distinct_count -= 1
-            left += 1
-
-        if distinct_count == k:
-            count += right - left + 1
-
-    return count
-
-
-print("Count", count_god_sub_array([1, 2, 1, 2, 3], 2))
-
-
 def count_good_sub_array(nums, k):
     count = 0
     left = 0
