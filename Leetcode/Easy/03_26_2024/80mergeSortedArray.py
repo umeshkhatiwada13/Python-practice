@@ -15,3 +15,7 @@ def merge_sorted_array(a, b):
 
 
 print(merge_sorted_array([1, 2, 3, 0, 0, 0], [2, 5, 6]))
+
+a = [1,2,3]
+for i, n in enumerate(a):
+    print(i, n)
