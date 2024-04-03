@@ -56,3 +56,41 @@ output = happy_number(int(num))
 print(output)
 if (output):
     print(f'{num} is Happy number')
+
+
+def count_good_subsets(nums):
+    MOD = 10 ** 9 + 7
+    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+
+    # Count occurrences of each number in nums
+    count = [0] * 51
+    for num in nums:
+        count[num] += 1
+
+    # Initialize dp array
+    dp = [0] * 51
+    dp[1] = 1
+
+    # Calculate dp values
+    for prime in primes:
+        for num in range(prime, 51, prime):
+            dp[num] += count[num] * dp[prime]
+            dp[num] %= MOD
+
+    # Special handling for multiples of 2, 3, 5, 7 since they can form multiple good subsets
+    total = sum(count)
+    for i in range(2, 51):
+        if i % 2 == 0 or i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
+            total -= count[i]
+
+    return (pow(2, total, MOD) * dp[1]) % MOD
+
+
+# Take input from the user
+nums = list(map(int, input("Enter the numbers separated by spaces: ").split()))
+
+print(nums)
+
+# Call the function and print the result
+print(count_good_subsets(nums))
+
